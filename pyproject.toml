@@ -1,0 +1,23 @@
+[project]
+name = "py-projects"
+version = "0.1.0"
+requires-python = ">=3.13"
+
+[tool.ruff]
+target-version = "py313"
+
+[tool.ruff.lint]
+extend-select = ["D400", "D419"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.mypy]
+# disable_error_code = ["import-untyped"]
+
+[[tool.pyright.overrides]]
+path = "14_sentiment_analysis_bot/sentiment_analysis_bot.py"
+reportMissingTypeStubs = false
